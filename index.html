@@ -3,6 +3,9 @@
 
   <head>
     <title>JavaScript fetch() Lab</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script> -->
     <style>
       .flexbox-container {
         display: -ms-flex;
@@ -40,6 +43,20 @@
         <div id="issues"></div>
       </div>
     </div>
+    <script src="index.js"></script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <h3>Forked Successfully!</h3>
+      <p><strong>{{full_name}}</strong></p>
+      <p>{{html_url}}</p>
+    </script>
+    <script id="issues-template" type="text/x-handlebars-template">
+      {{#each this}}
+        <h3>Issue:</h3>
+        <p><strong>{{title}}</strong></p>
+        <p><strong>{{body}}</strong></p>
+        <p>{{html_url}}</p>
+      {{/each}}
+    </script>
     <script src="index.js"></script>
   </body>
 
